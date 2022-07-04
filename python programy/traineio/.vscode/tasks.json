@@ -1,0 +1,41 @@
+{    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "g++.exe build active file",
+            "command": "C:\\MinGW\\bin\\g++.exe",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "-I","C:\\opencv\\OpenCV-MinGW-Build\\include",
+                "-L","C:\\opencv\\OpenCV-MinGW-Build\\x64\\mingw\\bin",                
+                "-llibopencv_calib3d",
+                "-llibopencv_core",
+                "-llibopencv_dnn",
+                "-llibopencv_features2d",
+                "-llibopencv_flann",
+                "-llibopencv_highgui",
+                "-llibopencv_imgcodecs",
+                "-llibopencv_imgproc",
+                "-llibopencv_ml",
+                "-llibopencv_objdetect",
+                "-llibopencv_photo",
+                "-llibopencv_stitching",
+                "-llibopencv_video",
+                "-llibopencv_videoio"
+            ],
+            "options": {
+                "cwd": "C:\\MinGW\\bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
